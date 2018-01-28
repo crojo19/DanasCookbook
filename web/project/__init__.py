@@ -47,6 +47,12 @@ def new():
          return redirect(url_for('show_all'))
    return render_template('new.html')
 
+
+@app.route('/new3', methods=['GET', 'POST'])
+def search():
+   return render_template('show_all.html', students=students.query.filter_by(pin='0905').all())
+
+
 if __name__ == '__main__':
    db.create_all()
    app.run(debug = True)

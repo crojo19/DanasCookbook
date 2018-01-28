@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Admin</title>
+</head>
+<body>
+    <h1>Hi, {{ current_user.email }}!</h1>
+    <tbody>
+    <table style="width:30%">
+        <tr>
+            <th>Email</th>
+            <td>ID</td>
+        </tr>
+      {% for user in users %}
+        <tr>
+            <td>{{user.email}}</td>
+            <td>{{user.id}}</td>
+            <td>{{user.first_name}}</td>
+            <td>{{user.middle_name}}</td>
+            <td>{{user.last_name}}</td>
+        </tr>
+      {% endfor %}
+    </table>
+    </tbody>
+</body>
+</html>

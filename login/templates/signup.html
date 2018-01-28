@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sign-up</title>
+</head>
+<body>
+    <h1>Sign-up</h1>
+    <form method="POST" action="/signup">
+        {{ form.hidden_tag() }}
+        {{ form.email.label }} {{ form.email(size=20) }}
+        {{ form.first_name.label }} {{ form.first_name(size=20) }}
+        {{ form.middle_name.label }} {{ form.middle_name(size=20) }}
+        {{ form.last_name.label }} {{ form.last_name(size=20) }}
+        {{ form.cell_phone.label }} {{ form.cell_phone(size=20) }}
+        {{ form.street_address.label }} {{ form.street_address(size=20) }}
+        {{ form.city.label }} {{ form.city(size=20) }}
+        {{ form.zip_code.label }} {{ form.zip_code(size=20) }}
+        {{ form.password.label }} {{ form.password(size=20) }}
+
+        <input type="submit" value="Signup">
+    </form>
+</body>
+</html>
